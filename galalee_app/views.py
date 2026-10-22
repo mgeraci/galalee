@@ -1,8 +1,9 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 from .models import Show
 
 def index(request):
     shows = Show.objects.order_by("-date")
-    output = ", ".join([show.venue for show in shows])
-    return HttpResponse(output)
+    context = {"shows": shows}
+
+    return render(request, "galalee_app/index.html", context)

@@ -1,0 +1,7 @@
+{% if shows %}
+<ul>
+  {% for show in shows %}
+  <li>{{ show.date }}: {{ show.venue }}, {{ show.location }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
