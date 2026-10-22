@@ -1,0 +1,10 @@
+database_backups
+.pyc
+**/*.pyc
+env
+galalee-venv
+.DS_Store
+node_modules
+.sass-cache
+localsettings.py
+yarn-error.log
